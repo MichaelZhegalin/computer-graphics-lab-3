@@ -1,4 +1,3 @@
-
 export const triangleForCoordAxesY = (context, startingPointX, startingPointY) => {
     context.beginPath();
     context.moveTo(startingPointY + 10,startingPointX);
