@@ -7,6 +7,7 @@ export const LaboratoryTask = (context, coordinateArr) =>{
 
     let bezierDotsX = [];
     let bezierDotsY = [];
+    let bezierDotsZ = [];
 
     let bezierDotsXForTest = [];
     let bezierDotsYForTest = [];
@@ -16,6 +17,7 @@ export const LaboratoryTask = (context, coordinateArr) =>{
         bezierDotsYForTest[i] = [coordinateArr[i].yCoordinate];
         bezierDotsX[i] = Number(coordinateArr[i].xCoordinate)
         bezierDotsY[i] = Number(coordinateArr[i].yCoordinate)
+        bezierDotsZ[i] = Number(coordinateArr[i].zCoordinate)
     }
 
     if(!FoolTest(bezierDotsXForTest, bezierDotsYForTest)){
@@ -26,6 +28,6 @@ export const LaboratoryTask = (context, coordinateArr) =>{
         return
     }
     bezierCurveEquation(bezierDotsX, bezierDotsY, context)
-    brokenLine(context, coordinateArr)
+    brokenLine(context, bezierDotsX, bezierDotsY, bezierDotsZ)
 
 }

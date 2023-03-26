@@ -59,21 +59,27 @@ function coordinate(context){
         }
     }
 
-    for(let i = 0; i > -200; i -= 50){
+    let count = 5;
+
+    for(let i = 0; i > -160; i -= Math.sqrt((50**2) / 2)){
         if (i !== 0){
-            context.moveTo(i + 6, i - 3)
-            context.lineTo(i - 3, i + 6)
+            context.moveTo(i + 3, i - 3)
+            context.lineTo(i - 3, i + 3)
             context.font = "15px serif";
-            context.fillText(`${i / 10}`, i - 25, i + 25);
+            context.fillText(`${count}`, i - 18, i + 18);
+            count += 5;
         }
     }
 
-    for(let i = 0; i < 60; i += 50){
+    count = -5;
+
+    for(let i = 0; i < 100; i += Math.sqrt((50**2) / 2)){
         if (i !== 0){
-            context.moveTo(i + 6, i - 3)
-            context.lineTo(i - 3, i + 6)
+            context.moveTo(i + 3, i - 3)
+            context.lineTo(i - 3, i + 3)
             context.font = "15px serif";
-            context.fillText(`${i / 10}`, i - 25, i + 25);
+            context.fillText(`${count}`, i - 18, i + 18);
+            count -= 5;
         }
     }
 
