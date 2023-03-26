@@ -13,12 +13,14 @@ function App() {
     const [coordinateArr, setCoordinateArr] = useState([{
         xCoordinate: "",
         yCoordinate: "",
+        zCoordinate: "",
         id: Date.now(),
     }])
     function createNewDot(){
         setCoordinateArr(prevState => [...prevState, {
             xCoordinate: "",
             yCoordinate: "",
+            zCoordinate: "",
             id: Date.now(),
         }])
     }
