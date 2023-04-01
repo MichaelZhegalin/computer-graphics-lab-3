@@ -27,7 +27,7 @@ export const LaboratoryTask = (context, coordinateArr) =>{
     if(!ExceedingCanvasCheck(bezierDotsX, bezierDotsY)){
         return
     }
-    bezierCurveEquation(bezierDotsX, bezierDotsY, context)
+    bezierCurveEquation(bezierDotsX, bezierDotsY, bezierDotsZ, context)
     brokenLine(context, bezierDotsX, bezierDotsY, bezierDotsZ)
 
 }
