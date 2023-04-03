@@ -2,7 +2,7 @@ import './style/App.css';
 import './style/btn.css';
 import Canvas from "./components/Canvas";
 import LabHeader from "./components/LabHeader";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Interface from "./components/Interface";
 
 function App() {
@@ -10,18 +10,30 @@ function App() {
     const [state, setState] = useState(false);
     const [clearState, setClearState] = useState(false);
 
+    let check = false;
+
     const [coordinateArr, setCoordinateArr] = useState([{
         xCoordinate: "",
         yCoordinate: "",
         zCoordinate: "",
         id: Date.now(),
     }])
-    function createNewDot(){
+    useEffect(()=>{
+        if(!check && coordinateArr.length < 3){
+
+            check = true;
+
+            for(let i = 0; i < 3; i++){
+                createNewDot(i);
+            }
+        }
+    }, [coordinateArr])
+    function createNewDot(num){
         setCoordinateArr(prevState => [...prevState, {
             xCoordinate: "",
             yCoordinate: "",
             zCoordinate: "",
-            id: Date.now(),
+            id: Date.now() - num*10,
         }])
     }
     function removeDot(dot){

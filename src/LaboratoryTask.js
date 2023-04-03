@@ -1,4 +1,4 @@
-import {bezierCurveEquation} from "./bezierСurves/BezierCurveEquation";
+import {bilinearPlane} from "./bezierСurves/BilinearPlane";
 import {brokenLine} from "./bezierСurves/BrokenLine";
 import {FoolTest} from "./secondaryFunctions/FoolTest";
 import {ExceedingCanvasCheck} from "./secondaryFunctions/ExceedingCanvasCheck ";
@@ -27,7 +27,7 @@ export const LaboratoryTask = (context, coordinateArr) =>{
     if(!ExceedingCanvasCheck(bezierDotsX, bezierDotsY)){
         return
     }
-    bezierCurveEquation(bezierDotsX, bezierDotsY, bezierDotsZ, context)
+    bilinearPlane(bezierDotsX, bezierDotsY, bezierDotsZ, context)
     brokenLine(context, bezierDotsX, bezierDotsY, bezierDotsZ)
 
 }
