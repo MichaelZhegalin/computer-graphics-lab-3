@@ -1,5 +1,5 @@
-import {bilinearPlane} from "./bezierСurves/BilinearPlane";
-import {brokenLine} from "./bezierСurves/BrokenLine";
+import {bilinearPlane} from "./bilinearPlane/BilinearPlane";
+import {brokenLine} from "./bilinearPlane/BrokenLine";
 import {FoolTest} from "./secondaryFunctions/FoolTest";
 import {ExceedingCanvasCheck} from "./secondaryFunctions/ExceedingCanvasCheck ";
 
