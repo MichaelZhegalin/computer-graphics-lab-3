@@ -1,4 +1,3 @@
-import {circle} from "../geometry/Сircle";
 import {drawLineIn3d} from "../3dDraw/DrawLineIn3d";
 import {drawCircleIn3d} from "../3dDraw/DrawCircleIn3d";
 
