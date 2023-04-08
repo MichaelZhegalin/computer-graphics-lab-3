@@ -23,12 +23,16 @@ function axes(context) {
 function coordinate(context){
     context.beginPath()
     context.fillStyle = 'black'
-    for(let i = 0; i < 380; i += 50){
+    for(let i = 0; i < 420; i += 50){
         if (i !== 0){
-            context.moveTo(3, i)
-            context.lineTo(-3, i)
-            context.font = "15px serif";
-            context.fillText(`${i / 10}`, 5, i);
+            if(i < 400){
+                context.moveTo(3, i)
+                context.lineTo(-3, i)
+                context.font = "15px serif";
+                context.fillText(`${i / 10}`, 5, i);
+            }else{
+                context.fillText(`Y`, 15, i - 15);
+            }
         }
     }
 
@@ -41,12 +45,17 @@ function coordinate(context){
         }
     }
 
-    for(let i = 0; i < 230; i += 50){
+    for(let i = 0; i < 260; i += 50){
         if (i !== 0){
-            context.moveTo(i, 3)
-            context.lineTo(i, -3)
-            context.font = "15px serif";
-            context.fillText(`${i / 10}`, i - 5, 15);
+            if(i < 240){
+                context.fillText(`${i / 10}`, i - 5, 15);
+                context.moveTo(i, 3)
+                context.lineTo(i, -3)
+                context.font = "15px serif";
+            }else{
+                context.fillText(`Z`, i - 20, 25);
+            }
+
         }
     }
 
@@ -61,12 +70,20 @@ function coordinate(context){
 
     let count = 5;
 
-    for(let i = 0; i > -160; i -= Math.sqrt((50**2) / 2)){
+    for(let i = 0; i > -180; i -= Math.sqrt((50**2) / 2)){
         if (i !== 0){
             context.moveTo(i + 3, i - 3)
             context.lineTo(i - 3, i + 3)
             context.font = "15px serif";
-            context.fillText(`${count}`, i - 18, i + 18);
+            if(count > 20){
+                count = "X"
+                context.save()
+                context.rotate(81)
+                context.fillText(`${count}`, -50, -290);
+                context.restore()
+            }else{
+                context.fillText(`${count}`, i - 18, i + 18);
+            }
             count += 5;
         }
     }
