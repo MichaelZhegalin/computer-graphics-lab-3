@@ -25,7 +25,6 @@ const Inputs = (props) => {
                 }  type="text" value={props.coordinate.zCoordinate}/>
             </div>
 
-            <button className="removeDot" onClick={() => props.removeDot(props.coordinate.id)}>×</button>
         </div>
     );
 };

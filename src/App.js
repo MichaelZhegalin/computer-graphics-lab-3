@@ -17,7 +17,10 @@ function App() {
         yCoordinate: "",
         zCoordinate: "",
         id: Date.now(),
-    }])
+    }]);
+
+    const [rotationAngles, setRotationAngles] = useState(["", "", ""]);
+
     useEffect(()=>{
         if(!check && coordinateArr.length < 3){
 
@@ -36,9 +39,6 @@ function App() {
             id: Date.now() - num*10,
         }])
     }
-    function removeDot(dot){
-        setCoordinateArr(coordinateArr.filter(dots => dots.id !== dot))
-    }
 
     const clear = () =>{
         setClearState(prevState => !prevState);
@@ -52,7 +52,7 @@ function App() {
     <div className="App">
         <LabHeader/>
         <Canvas clearState={clearState} draw={draw} setClearState={setClearState} state={state} coordinateArr={coordinateArr}/>
-        <Interface draw={draw} clear={clear} removeDot={removeDot} createNewDot={createNewDot} coordinateArr={coordinateArr} setCoordinateArr={setCoordinateArr}/>
+        <Interface draw={draw} clear={clear} coordinateArr={coordinateArr} setCoordinateArr={setCoordinateArr} rotationAngles={rotationAngles} setRotationAngles={setRotationAngles}/>
     </div>
   );
 }

@@ -52,7 +52,7 @@
 }
 
 .createDot{
-    width: 27vw;
+    width: 20vw;
     align-self: center;
     font-size: 14px;
     font-weight: bold;
@@ -60,10 +60,33 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(237,135,45, 0.6);
+    background-color: rgba(237,135,45, 0.7);
+    margin-bottom: 30px;
 }
 
 .createDot:hover{
     transition: ease-in 175ms;
-    background-color: rgba(237,135,45, 0.8);
+    background-color: rgba(237,135,45, 0.9);
+}
+
+.rotationBtn{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+    border: none;
+    background-color: rgba(237,135,45, 0);
+    cursor: pointer;
+    color: rgba(0,0,0, 0.7);
+}
+
+.rotationBtnLeft:hover{
+    rotate: -90deg;
+    color: rgba(0,0,0, 1);
+    transition: ease-in 250ms;
+}
+
+.rotationBtnRight:hover{
+    rotate: 90deg;
+    color: rgba(0,0,0, 1);
+    transition: ease-in 250ms;
 }
