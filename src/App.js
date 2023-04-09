@@ -42,6 +42,13 @@ function App() {
 
     const clear = () =>{
         setClearState(prevState => !prevState);
+        for(let i = 0; i < 4; i++){
+            coordinateArr[i].xCoordinate = '';
+            coordinateArr[i].yCoordinate = '';
+            coordinateArr[i].zCoordinate = '';
+        }
+        setCoordinateArr(prev => [...prev])
+        setRotationAngles(["", "", ""])
     }
 
     const draw = () => {
