@@ -1,15 +1,22 @@
-export const ExceedingCanvasCheck = (bezierDotsX, bezierDotsY) => {
+export const ExceedingCanvasCheck = (bezierDotsX, bezierDotsY, bezierDotsZ) => {
 
     for(let i = 0; i < bezierDotsX.length; i++){
-        if(bezierDotsX[i] > 36 || bezierDotsX[i] < -36){
-            alert(`Точка ${i} выходит за границы холста по оси Х!`)
+        if(bezierDotsX[i] > 25 || bezierDotsX[i] < -15){
+            alert(`Точка ${i} выходит за границы оси Х!`)
             return false
         }
     }
 
     for(let i = 0; i < bezierDotsY.length; i++){
-        if(bezierDotsY[i] > 21 || bezierDotsY[i] < -21){
-            alert(`Точка ${i} выходит за границы холста по оси Y!`)
+        if(bezierDotsY[i] > 39 || bezierDotsY[i] < -20){
+            alert(`Точка ${i} выходит за границы оси Y!`)
+            return false
+        }
+    }
+
+    for(let i = 0; i < bezierDotsY.length; i++){
+        if(bezierDotsZ[i] > 24 || bezierDotsZ[i] < -19){
+            alert(`Точка ${i} выходит за границы оси Z!`)
             return false
         }
     }
