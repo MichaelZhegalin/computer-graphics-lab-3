@@ -24,7 +24,7 @@ export const LaboratoryTask = (context, coordinateArr) =>{
         return
     }
 
-    if(!ExceedingCanvasCheck(bezierDotsX, bezierDotsY)){
+    if(!ExceedingCanvasCheck(bezierDotsX, bezierDotsY, bezierDotsZ)){
         return
     }
     bilinearPlane(bezierDotsX, bezierDotsY, bezierDotsZ, context)
